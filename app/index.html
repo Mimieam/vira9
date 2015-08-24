@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="description" content="TicTacToe9">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>vira9</title>
@@ -34,6 +35,8 @@
 
     <!-- Page styles -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+
   </head>
   <body>
     <header class="app-bar promote-layer">
@@ -52,24 +55,85 @@
       <ul>
         <li><a href="#hello">Hello</a></li>
         <li><a href="#get-started">Get Started</a></li>
-        <li><a href="styleguide.html">Style Guide</a></li>
+        <li><a href="#">Score</a></li>
       </ul>
     </nav>
 
     <main>
-      <h1 id="hello">Hello!</h1>
-      <p>Welcome to Vira9.</p>
+    <div class="section no-pad-bot flexbox-container " id="index-banner">
+    <div class="board">
+      <div class="card row">
+        <div class="center card-image waves-effect waves-block waves-light col s9 ">
 
-      <h2 id="get-started">Get Started.</h2>
-      <p>Read how to <a href="https://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide.html">Style Guide</a>.</p>
+          <div class="row">
+            <div class="col s4 tile" id="cell1">
+              <div data-id="1" class="card-panel orange white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell2">
+              <div data-id="2" class="card-panel teal white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell3">
+              <div data-id="3" class="card-panel teal white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell4">
+              <div data-id="4" class="card-panel teal white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell5">
+              <div data-id="5" class="card-panel teal white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell6">
+              <div data-id="6" class="card-panel teal white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell7">
+              <div data-id="7" class="card-panel teal white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell8">
+              <div data-id="8" class="card-panel teal white-text"> .
+              </div>
+            </div>
+            <div class="col s4 tile" id="cell9">
+              <div data-id="9" class="card-panel teal white-text"> .
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Instructions <i class="mdi-navigation-more-vert right"></i>
+            <p>
+              <input type="RESET" class="app-reset">
+              <a class="app-timer-mate" href="#">|٩(͡๏̯͡๏)۶|</a>
+              <span class="app-timer">
+              </span></p>
+            </span>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">How to play <i class="mdi-navigation-close right"></i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </main>
+    
     <nav class="bottom-bar">
-      <button class="bottom-btn">H</button>
+      <button class="bottom-btn"></button>
       <button class="bottom-btn"></button>
       <button class="bottom-btn"></button>
       <button class="bottom-btn"></button>
     </nav>
     <!-- build:js scripts/main.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 

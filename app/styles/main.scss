@@ -12,6 +12,22 @@
  * Remove if you prefer to use a CSS library, like Bootstrap
  */
 @import 'components/components';
+
+$header-color: lightcoral;
+.flexbox-container {
+    background: #1ABC9C;
+    
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .bottom-bar {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -71,14 +87,13 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: lightseagreen;
 }
 
 body {
   position: relative;
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  background-color: lightseagreen;
+  background-color: lightcyan;
   box-sizing: border-box;
   min-height: 100%;
 }

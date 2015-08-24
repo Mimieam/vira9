@@ -1,0 +1,18 @@
+{
+  "name": "vira9",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Mimieam/vira9",
+  "authors": [
+    "Mimieam <t.echismimi@gmail.com>"
+  ],
+  "description": "TicTacToe9",
+  "main": "app/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
