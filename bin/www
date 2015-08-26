@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 var app = require('../server');
-
-// var io = require('../server');
+var httpServer = require('http').createServer(app);
+var gameServer = require('../_gameServer');
 
 app.set('port', process.env.PORT || 3000);
+//wrap Express into an http server to handle Engine.io
 
-var server = app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + server.address().port);
+var ViraServer = app.listen(app.get('port'), function() {
+  console.log('Vira server Started on port ' + ViraServer.address().port);
 });
 
-// io.attach(server);
+
+gameServer(ViraServer) // connect express to gameServer

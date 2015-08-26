@@ -44,6 +44,7 @@
   "main": "bin/www",
   "dependencies": {
     "engine.io": "^1.5.2",
+    "engine.io-rooms": "^0.1.1",
     "express": "^4.13.3",
     "serve-favicon": "^2.3.0"
   }

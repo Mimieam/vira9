@@ -144,18 +144,14 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git'], {dot: true})
 // Watch files for changes & reload
 gulp.task('serve', ['styles'], function () {
   browserSync({
-    proxy: "http://localhost:3000",
-    files: ['.tmp', 'app'],
-    browser: "google chrome",
-    port: 7000,
-    notify: false,
     // Customize the BrowserSync console logging prefix
     logPrefix: 'VI9',
     // Run as an https by uncommenting 'https: true'
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    // server: ['.tmp', 'app']
+    server: ['.tmp', 'app'],
+    browser: "google chrome",
   });
 
   gulp.watch(['server.js'], ['jshint',reload]);
@@ -238,7 +234,7 @@ gulp.task('browser-sync', ['default', 'nodemon'], function () {
   browserSync.init({
 
     // watch the following files; changes will be injected (css & images) or cause browser to refresh
-    files: ['public/**/*.*'],
+    files: ['dist/**/*.*'],
 
     // informs browser-sync to proxy our expressjs app which would run at the following location
     proxy: 'http://localhost:3000',
@@ -250,6 +246,11 @@ gulp.task('browser-sync', ['default', 'nodemon'], function () {
     // open the proxied app in chrome
     browser: ['google-chrome']
   });
+
+  // gulp.watch(['app/**/*.html'], ['default',reload]);
+  // gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
+  // gulp.watch(['app/scripts/**/*.js'], ['jshint']);
+  // gulp.watch(['app/images/**/*'], ['default',reload]);
 });
 
 
