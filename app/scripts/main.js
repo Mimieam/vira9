@@ -289,15 +289,14 @@ var Autumn = (function (name, game) {
         this.name = name;
         // this.game = game;
         // this.game.players.push(this);
+        this.UI = UI;
         this.socket = socket
-        this.game = gameServerAPI(this.socket, UI);
-        console.log(this.socket);
+        this.game = gameServerAPI(this.socket, this.UI);
         this.game.server.login(name);
         this.game.server.getGame();
 
         /* components*/
 
-        this.UI = UI;
         this.timer = new countDownTimer(timerCallback, 30, document.querySelector(".app-timer"))  // every 30 sec
         this.mateFace = new countDownTimer(mateFace, 10, document.querySelector(".app-timer-mate"),1000, mateFace)  // TODO -> clean that!
         this.mateFace.start()
@@ -348,7 +347,7 @@ var Autumn = (function (name, game) {
         }
     };
 
-    var Ai = new AI(name, new UI(), new socket(window.location.hostname , window.location.port))
+    var Ai = new AI(name, new UI(), new socket('//' + window.location.hostname , window.location.port))
     console.log(Ai)
     Ai.initUI();
 
