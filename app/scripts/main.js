@@ -216,7 +216,7 @@ var Autumn = (function (name, game) {
 
     var socket = function (serverAddress,port) {
         var _this = this
-        var _socket = new eio.Socket('ws://' + serverAddress + ':' + port);
+        var _socket = new eio.Socket('wss://' + serverAddress + ':' + port);
 
         _socket.on('open', function(){
             _socket.on('message', server_message_handler.bind({}, this, _socket));
