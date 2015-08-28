@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var app = require('../server');
-var httpsServer = require('https').createServer(app);
+var httpServer = require('http').createServer(app);
 var gameServer = require('../_gameServer');
 
 app.set('port', process.env.PORT || 3000);
